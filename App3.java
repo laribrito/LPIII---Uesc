@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-/**
- * App3
- */
+// jogo do crabs
 public class App3 {
 
     public static void main(String[] args) {
@@ -48,5 +46,7 @@ public class App3 {
                 }
             }while(soma != ponto && soma !=7);
         }
+
+        input.close();
     }
 }

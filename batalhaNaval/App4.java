@@ -1,6 +1,7 @@
 package batalhaNaval;
 import java.util.Scanner;
 
+// Jodo da batalha naval
 public class App4 {
     static short QTD_NAVIOS = 5;
     static Jogador player1 = new Jogador(1);
