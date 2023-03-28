@@ -1,5 +1,4 @@
 package Lista01.batalhaNaval;
-import java.util.Scanner;
 import java.util.Random;
 
 // Jodo da batalha naval
