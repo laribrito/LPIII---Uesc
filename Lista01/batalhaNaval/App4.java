@@ -1,25 +1,28 @@
 package Lista01.batalhaNaval;
 import java.util.Scanner;
+import java.util.Random;
 
 // Jodo da batalha naval
 public class App4 {
-    static short QTD_NAVIOS = 5;
+    static final short QTD_NAVIOS = 5;
+    static final int MAX_RANDOM = 7;
     static Jogador player1 = new Jogador(1);
     static Jogador player2 = new Jogador(2);
     public static void main(String[] args) {
         intro();
         //variaveis e objetos
-        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
         String msg;
-        short tempx, tempy;
+        int tempx, tempy;
         boolean atirou;
 
         // pergunta as coordenadas
         System.out.println(player1.nome + ", enter your ships' coordinates.");
         for (short x=1; x<=QTD_NAVIOS; ){
             System.out.println("Enter ship " + x + " location > x y <:");
-            tempx=input.nextShort();
-            tempy=input.nextShort();
+            tempx= rand.nextInt(MAX_RANDOM);
+            tempy= rand.nextInt(MAX_RANDOM);
+            System.out.println(tempx + " "+ tempy);
             msg = player1.insereCoordenadas(tempx, tempy);
             if (msg != "") System.out.println(msg);
             else x++;
@@ -32,8 +35,9 @@ public class App4 {
         System.out.println(player2.nome + ", enter your ships' coordinates.");
         for (short x=1; x<=QTD_NAVIOS; ){
             System.out.println("Enter ship " + x + " location > x y <:");
-            tempx=input.nextShort();
-            tempy=input.nextShort();
+            tempx= rand.nextInt(MAX_RANDOM);
+            tempy= rand.nextInt(MAX_RANDOM);
+            System.out.println(tempx + " "+ tempy);
             msg = player2.insereCoordenadas(tempx, tempy);
             if (msg != "") System.out.println(msg);
             else x++;
@@ -46,8 +50,9 @@ public class App4 {
             // player 1 atira
             do{
                 System.out.println(player1.nome + ", enter hit row/column:");
-                tempx=input.nextShort();
-                tempy=input.nextShort();
+                tempx= rand.nextInt(MAX_RANDOM);
+                tempy= rand.nextInt(MAX_RANDOM);
+                System.out.println(tempx + " "+ tempy);
 
                 atirou = player1.atiraEm(player2, tempx, tempy);
             } while(!atirou);
@@ -61,8 +66,9 @@ public class App4 {
             // player 2 atira
             do{
                 System.out.println(player2.nome + ", enter hit row/column:");
-                tempx=input.nextShort();
-                tempy=input.nextShort();
+                tempx= rand.nextInt(MAX_RANDOM);
+                tempy= rand.nextInt(MAX_RANDOM);
+                System.out.println(tempx + " "+ tempy);
                 
                 atirou = player2.atiraEm(player1, tempx, tempy);
             } while(!atirou);
@@ -73,7 +79,6 @@ public class App4 {
                 break;
             }
         }
-        input.close();
     }
 
     public static void intro(){

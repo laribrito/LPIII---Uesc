@@ -71,7 +71,7 @@ public class Jogador{
         System.out.println();
     }
 
-    public boolean atiraEm(Jogador alvo, short tempx, short tempy){
+    public boolean atiraEm(Jogador alvo, int tempx, int tempy){
         // validar o máximo
         if (tempx > this.MAX_COORD || tempy > this.MAX_COORD || tempx < this.MIN_COORD || tempy < this.MIN_COORD){
             System.out.println("Invalid coordinates. Choose different coordinates.");
