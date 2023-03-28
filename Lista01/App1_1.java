@@ -1,4 +1,4 @@
-package lista1;
+package Lista01;
 /**
  * App1_1
  */

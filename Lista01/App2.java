@@ -1,4 +1,4 @@
-package lista1;
+package Lista01;
 import java.util.Scanner;
 
 // Multímetro quebrado?
