@@ -1,16 +1,16 @@
 package Lista01;
-import java.util.Scanner;
+import java.util.Random;
 
 // Multímetro quebrado?
 public class App2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
         float[] valores = new float[10];
         float soma = 0, media = 0, desvio = 0;
         
         for (int i = 0; i < valores.length; i++) {
-            System.out.print("Valor da medição " + (i+1) + ": ");
-            valores[i] = sc.nextFloat();
+            valores[i] = rand.nextFloat();
+            // valores[i] = 1;
             soma += valores[i];
         }
 
@@ -31,7 +31,6 @@ public class App2 {
         System.out.println("Desvio padrão: " + desvio);
         String msg =  desvio > (media*0.1)?"COM PROBLEMAS":"OK";
         System.out.println("Status do aparelho: "+msg);
-        sc.close();
     }
 
     public static void limpaTela(){
