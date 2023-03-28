@@ -1,4 +1,4 @@
-package lista1.batalhaNaval;
+package Lista01.batalhaNaval;
 import java.util.Scanner;
 
 // Jodo da batalha naval

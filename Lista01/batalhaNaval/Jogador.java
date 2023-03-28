@@ -1,4 +1,4 @@
-package lista1.batalhaNaval;
+package Lista01.batalhaNaval;
 
 public class Jogador{
     char[][] mapa = new char[5][5];
