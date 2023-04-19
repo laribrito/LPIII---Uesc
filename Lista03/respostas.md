@@ -338,4 +338,7 @@ fim modelo
 
 > Para desenhar um gráfico seria necessário estabelecer os pontos através de uma função e criar ponto por ponto
 
+## Questão 13
+
+<img src="add/13.png" width="300">
 
