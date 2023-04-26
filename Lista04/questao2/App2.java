@@ -23,8 +23,11 @@ class App2 {
     }
 
     public static void exibeContatos(Contato[] listaContatos){
+      int idade;
       for(int x=0;x<QUANT_CONTATOS; x++){
         listaContatos[x].imprimirContato();
+        idade = listaContatos[x].calcularIdade();
+        System.out.println("O contato de nome " + listaContatos[x].getNome() + " tem " + idade + " anos");
       }
     }
   }

@@ -32,7 +32,7 @@ class Contato{
 	}
 
 	public int calcularIdade(){
-		int anoHoje = Calendar.DAY_OF_YEAR;
+		int anoHoje = Calendar.getInstance().get(Calendar.YEAR);
 		return anoHoje - dataNasc.getAno();
 	}
 
