@@ -1,6 +1,6 @@
-package questao3;
+package questao4;
 
-public class App3 {
+public class App4 {
     public static void main(String[] args) {
         Ponto2D a = new Ponto2D();
         Ponto2D b = new Ponto2D();

@@ -1,4 +1,4 @@
-package questao3;
+package questao4;
 
 // Nome da classe: Ponto2D
 // Atributos: x (abscisa), y (ordenada);
