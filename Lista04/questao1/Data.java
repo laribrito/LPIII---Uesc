@@ -22,6 +22,22 @@ class Data{
 		this.valido=valido;
 		return valido;
 	}
+
+	public int getDia(){
+		return dia;
+	}
+
+	public int getMes(){
+		return mes;
+	}
+
+	public int getAno(){
+		return ano;
+	}
+
+	public boolean getValido(){
+		return valido;
+	}
 	
 	public boolean inicializarData(int d, int m, int a){
 		boolean retorno = verificarData(d, m, a);
