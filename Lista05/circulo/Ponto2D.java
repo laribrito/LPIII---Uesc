@@ -10,8 +10,12 @@ public class Ponto2D {
         this.y = y;
     }
 
-    Ponto2D(int x){
-        this(x, 0);
+    Ponto2D(int val){
+        this(val, val);
+    }
+
+    Ponto2D(){
+        this(0, 0);
     }
 
     public void imprimirPonto(){
