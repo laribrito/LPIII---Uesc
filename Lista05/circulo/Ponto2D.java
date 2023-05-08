@@ -1,4 +1,4 @@
-package Lista05.ponto2d;
+package Lista05.circulo;
 
 import java.lang.Math;
 
@@ -10,12 +10,8 @@ public class Ponto2D {
         this.y = y;
     }
 
-    Ponto2D(int val){
-        this(val, val);
-    }
-
-    Ponto2D(){
-        this(0, 0);
+    Ponto2D(int x){
+        this(x, 0);
     }
 
     public void imprimirPonto(){
