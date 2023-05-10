@@ -6,7 +6,8 @@ public class Data{
 	private int dia, mes, ano;
 	private boolean valido=false;
 	private final String[] nomeMeses = {"Janeiro","Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}; 
-	
+	private final String[] diasDaSemana = {"Sábado", "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"};
+
 	Data(int d, int m, int a){
 		if(verificarData(d, m, a)){
 			dia = d;
@@ -24,7 +25,7 @@ public class Data{
 	}
 
 	Data(int dia){
-		this(dia, Calendar.getInstance().get(Calendar.MONTH));
+		this(dia, Calendar.getInstance().get(Calendar.MONTH)+1);
 	}
 
 	Data(int dia, int mes){
@@ -71,15 +72,11 @@ public class Data{
 			System.out.println("Essa data não é válida");
 			return;
 		}
-		for(int x=0; x<12;x++){
-			if((x+1)==mes){
-				String texto;
-				texto = ano<0? dia+" de "+nomeMeses[x]+" de "+ (ano*(-1))+ " A.C.": dia+" de "+nomeMeses[x]+" de "+ano;
-				System.out.println(texto);
-				break;
-			}
-		}
-		return;
+		
+		String texto;
+		int m = mes-1;
+		texto = ano<0? dia+" de "+nomeMeses[m]+" de "+ (ano*(-1))+ " A.C.": dia+" de "+nomeMeses[m]+" de "+ano;
+		System.out.println(texto);
 	}
 
 	// boolean isPrevious(Data outraData): retorna verdadeiro se a data, que passamos
@@ -95,5 +92,26 @@ public class Data{
 			}
 		}
 		return false;
+	}
+
+	// int howManyDays(Data outraData): retorna a quantidade de dias até a data
+	// enviada como parâmetros, se a data for anterior o valor retornado deve ser
+	// negativo
+	public int howManyDays(Data outra){
+		int diaIni = this.getDia(), mesIni = this.getMes(), anoIni = this.getAno();
+		int diaFim = outra.getDia(), mesFim = outra.getMes(), anoFim = outra.getAno();
+
+		int difAno = (anoFim - anoIni) * 365;
+		int difMes = (mesFim - mesIni) * 30;
+		int difDia = diaFim - diaIni;
+
+		return difAno + difMes + difDia;
+	}
+
+	// String dayOfWeek(): retorna o dia da semana representado pela data;
+	public String dayOfWeek(){
+		int d = this.getDia(), m = this.getMes(), y = this.getAno();
+		int numDiaSemana = ((d + ((m + 1) * 26 / 10) + y + (y / 4) + (6 * (y / 100)) + (y / 400)) % 7);
+		return diasDaSemana[numDiaSemana];
 	}
 }
