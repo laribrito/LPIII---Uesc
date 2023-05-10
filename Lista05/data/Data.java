@@ -72,15 +72,11 @@ public class Data{
 			System.out.println("Essa data não é válida");
 			return;
 		}
-		for(int x=0; x<12;x++){
-			if((x+1)==mes){
-				String texto;
-				texto = ano<0? dia+" de "+nomeMeses[x]+" de "+ (ano*(-1))+ " A.C.": dia+" de "+nomeMeses[x]+" de "+ano;
-				System.out.println(texto);
-				break;
-			}
-		}
-		return;
+		
+		String texto;
+		int m = mes-1;
+		texto = ano<0? dia+" de "+nomeMeses[m]+" de "+ (ano*(-1))+ " A.C.": dia+" de "+nomeMeses[m]+" de "+ano;
+		System.out.println(texto);
 	}
 
 	// boolean isPrevious(Data outraData): retorna verdadeiro se a data, que passamos
