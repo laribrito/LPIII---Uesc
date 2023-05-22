@@ -1,4 +1,5 @@
 package Lista06.contato;
+import Lista06.data.Data;
 
 class App3 {
     static final int QUANT_CONTATOS = 4;

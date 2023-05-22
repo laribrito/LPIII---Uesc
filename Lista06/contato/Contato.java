@@ -1,6 +1,7 @@
 package Lista06.contato;
 
 import java.util.Calendar;
+import Lista06.data.Data;
 
 
 public class Contato{

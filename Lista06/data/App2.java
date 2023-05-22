@@ -1,7 +1,5 @@
 package Lista06.data;
 
-import Lista06.contato.Data;
-
 class App2 {
     public static void main(String[] args) {
       Data date = new Data(10, 5, 2023);
