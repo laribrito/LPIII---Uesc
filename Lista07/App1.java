@@ -32,6 +32,11 @@ class App1 {
 
       System.out.println("\nO contato de nome " + semEmail.getNome() + " tem " + semEmail.getIdade() + " anos");
       System.out.println("O seu email é: " + semEmail.getEmail());
+
+      // exemplo sem nome e telefone
+      Contato vazio = new Contato(" ", " ");
+      // System.out.println("\nO contato de nome " + vazio.getNome() + " tem " + vazio.getIdade() + " anos");
+      // System.out.println("O seu email é: " + vazio.getEmail());
       
       Contato.printQtdContatos();
     }

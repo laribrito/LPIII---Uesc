@@ -8,13 +8,28 @@ public class Contato{
 	private Data dataNasc;
 
 	public Contato(String nome, String telefone, String email, Data data){
-		this.nome = nome;
-		this.email = email;
-		this.telefone = telefone;
-		this.dataNasc = data;
+		// validação do nome, telefone ou email
+		if(nomeValido(nome) && telefoneValido(telefone)){
+			this.nome = nome;
+			this.email = email;
+			this.telefone = telefone;
+			this.dataNasc = data;
+	
+			// atualiza o atributo estático
+			qtdContatos++;
+		} else {
+			System.out.println("Nome e Telefone são campos obrigatórios");
+		}
+	}
 
-		// atualiza o atributo estático
-		qtdContatos++;
+	private boolean nomeValido(String nome){
+		if(nome.isBlank()) return false;
+		return true;
+	}
+
+	private boolean telefoneValido(String telefone){
+		if(telefone.isBlank()) return false;
+		return true;
 	}
 	
 	// sem data e email
